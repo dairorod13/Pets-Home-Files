@@ -1,0 +1,42 @@
+.Logo{
+    position: absolute;
+    background: white;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+}
+.imagen{
+    width: 20%;
+}
+.row{
+    display: flex;
+}
+.panel2{
+     width: 30%;
+     height:400px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 5px 5px #0000000f;
+     margin: 15px;
+     border:#0029ff 2px solid;
+ }
+ 
+     #panel:hover{
+         transform: translateY(-5px);
+     }
+.panel2 h3,.panel2  p{
+    color: #000cff;
+    height: 60px;
+}
+.panel2  p{
+  margin-top:10px;
+}
+.img-publication{
+    width: 75%;
+}
