@@ -5,13 +5,13 @@ class indexController extends usuarios{
     public function index(){
         require_once 'views/layouts/header_index.php';
         require_once 'views/index/index.php';
-        require_once 'views/layouts/footer.php';
+        require_once 'views/layouts/footer_index.php';
     } 
 
     public function create(){
         require_once 'views/layouts/header_index.php';
         require_once 'views/index/create.php';
-        require_once 'views/layouts/footer.php';
+        require_once 'views/layouts/footer_index.php';
     } 
     public function signup(){
     $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -24,7 +24,7 @@ class indexController extends usuarios{
     public function signin(){
         require_once 'views/layouts/header_index.php';
         require_once 'views/index/login.php';
-        require_once 'views/layouts/footer.php';
+        require_once 'views/layouts/footer_index.php';
     } 
 
 }

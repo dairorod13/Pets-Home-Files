@@ -1,51 +1,57 @@
-<section>
+
 <div class="row">
-<div class="col s2"></div>
-    <form class="col s8" method="POST" action="?controller=usuario&method=account">
-        
-        <h1>Mi perfil</h1>
-        <input type="hidden" name="id_user" value="<?= $change->id_user ?>">
-        
-        <div class="input-field col s6">
-          <input id="name" type="text" name="nombre" class="validate" value="<?= $change->nombre_user ?>">
+<div class="col s12 "></div>
+</div>
+<div class="row">
+<div class="col s1 "></div>
+    <form class="col s10 card-panel" action="?controller=usuario&method=account" method="POST">
+      <h3 class="blue-text center-align">Mi perfil</h3>
+        <div class="input-field col s6">     
+          <input id="id_user" type="hidden" name="id_user" class="validate" value="<?= $change->id_user ?>" required> 
+          <input id="name" type="text" name="nombre" class="validate" value="<?= $change->nombre_user ?>"  required>
           <label for="name">Nombre</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" name="apellido" class="validate" value="<?= $change->apellido_user ?>">
+          <input id="last_name" type="text" name="apellido" class="validate" value="<?= $change->apellido_user ?>" required>
           <label for="last_name">Apellido</label>
         </div>
-        <div class="input-field col s6">
-          <input id="date" name="fecha" type="text" class="validate" value="<?= $change->fecha_user ?>">
+        <div class="input-field col s12">
+          <input type="text" name="fecha" class="datepicker" placeholder="Seleciona tu Fecha de nacimiento" required>
         </div>
-        <select name="documento" >
-        <option value="">seleccione aqui...</option>
-        <option value="1">cedula</option>
-        <option value="2">extran</option>
-        <option value="3">tarjeta de </option>
-        </select>
-        <div class="input-field col s6">
-          <input id="numero" name="numero" type="text" class="validate" value="<?= $change->numero_doc ?>">
-          <label for="numero">Numero de documento</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="direccion" name="direccion" type="text" class="validate" value="<?= $change->direccion_ciudad ?>">
-          <label for="direccion">Direccion</label>
+        <div class="input-field col s12">
+      <select required name="documento" value="<?= $change->documento_id ?>">
+        <option value="" disabled selected>Seleciona tu tipo de documento</option>
+        <option value="1">Cedula de Ciudadania</option>
+        <option value="2">Cedula Extranjera</option>
+        <option value="3">Tarjeta de identidad</option>
+      </select>
+    </div>
+        <div class="input-field col s12">
+          <input id="number_document" name="numero" type="tel" class="validate" value="<?= $change->numero_doc ?>" required>
+          <label for="number_document">Numero de documento</label>
         </div>
         <div class="input-field col s6">
-          <input id="telefono" name="telefono" type="text" class="validate" value="<?= $change->telefono_user ?>">
-          <label for="telefono">Telefono</label>
+          <input id="direction" type="text" name="direccion" class="validate" value="<?= $change->direccion_ciudad ?>" required>
+          <label for="direction">Direccion</label>
         </div>
         <div class="input-field col s6">
-          <input id="correo" type="email" name="correo" class="validate" value="<?= $change->correo_user ?>">
-          <label for="correo">Correo electronico</label>
+          <input id="number" type="tel"  name="telefono" class="validate" value="<?= $change->telefono_user ?>" required>
+          <label for="number">Telefono</label>
         </div>
         <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate">
+          <input id="email" type="email" name="email" class="validate" value="<?= $change->correo_user ?>" required>
+          <label for="email">Correo electronico</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="password" type="password" name="password" class="validate" required>
           <label for="password">Contraseña</label>
         </div>
-        <input class="btn btn-green" type="submit" value="Modificar datos">
+        <center>
+        <input class="btn btn-green" type="submit" value="Modificar">
+        </center>
+
     </form>
-<div class="col s2"></div>
+<div class="col s1"></div>
 </div>
-          <a class="btn btn-danger" href="?controller=usuario">Regresar</a>
-</section>
+
+      

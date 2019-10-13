@@ -1,3 +1,3 @@
 <section>
-    <h1>Bienvenido señor usuario ADOPTA UN ANIMAL</h1>
+ <h1>WELCOME USER, ARE YOU READY TO FIND A PET?</h1>
 </section>

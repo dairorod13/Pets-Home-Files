@@ -21,12 +21,13 @@
             <td><?= $user->apellido_user ?></td>
             <td><?= $user->fecha_user ?></td>
             <td><?= $user->nombre_documento?></td>
-            <td><?= $user->documento_id?></td>
+            <td><?= $user->numero_doc?></td>
             <td><?= $user->direccion_ciudad?></td>
             <td><?= $user->telefono_user ?></td>
             <td><?= $user->correo_user?></td>
             <td><?= $user->nombre_rol?></td>
-            <td><a href="?controller=administrador&method=estado&id_user=<?= $user->id_user ?>"><?= $user->nombre_estado?></a></td>
+            <td><?= $user->nombre_estado?></td>
+            <td><a href="?controller=administrador&method=estado&id_user=<?= $user->id_user ?>"><img class="imagen" src="assets/img/edit.svg" alt=""></a></td>
             </a>
             </td>
         </tr>

@@ -16,7 +16,7 @@
           <label for="last_name">Apellido</label>
         </div>
         <div class="input-field col s12">
-          <input type="date" name="fecha" required>
+          <input type="text" name="fecha" class="datepicker" placeholder="Seleciona tu Fecha de nacimiento" required>
         </div>
         <div class="input-field col s12">
       <select required name="documento" value="<?= $change->documento_id ?>">

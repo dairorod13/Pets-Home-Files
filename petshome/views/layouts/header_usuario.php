@@ -2,7 +2,12 @@
 
 session_start();
 $name = $_SESSION['usuario'];
-?> <!DOCTYPE html>
+$variable = $_SESSION['usuario'];
+$id = $variable->id_user;
+$usuario = parent::about_user($id);
+?>
+
+<!DOCTYPE html>
   <html>
     <head>
       <!--Import Google Icon Font-->
@@ -12,7 +17,7 @@ $name = $_SESSION['usuario'];
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="assets/css/Style.css">
+      <link rel="stylesheet" href="assets/css/Styles.css">
       <title>Inicio</title>
       <link rel="icon" type="image/png" href="assets/img/Pets_Home2.png">
     </head>
@@ -44,10 +49,10 @@ $name = $_SESSION['usuario'];
 
             
             </div>
-              <li><a href="?controller=index">Inicio</a></li>
-              <li><a href="#">Comunidad</a></li>
-              <li><a href="?controller=index&method=create">Registrar</a></li>
-              <li><a href="?controller=index&method=create">Ingresar</a></li>
+        <li><a href="?controller=usuario&method=index">Inicio</a></li>
+        <li><a href="?controller=usuario&method=comunidad">Comunidad</a></li>
+        <li><a href="?controller=usuario&method=registro">Registra mascotas</a></li>
+         <li><a href="?controller=security&method=logout">Cerrar sesion</a></li>
             </ul>
 
 
@@ -55,8 +60,8 @@ $name = $_SESSION['usuario'];
   <nav>
     <div class="nav-wrapper blue darken-3">
       <div class="container">
-      <a href="?controller=usuario&method=profile&id_user=<?= $name->id_user ?>" class="brand-logo">
-       <button><?= $name->nombre_user?> <?= $name->apellido_user?></button></a>
+      <a href="?controller=usuario&method=profile&id_user=<?= $usuario->id_user ?>" class="brand-logo">
+       <?= $usuario->nombre_user?> <?= $usuario->apellido_user?></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
      
 
